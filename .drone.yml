@@ -7,3 +7,6 @@ steps:
   image: alpine
   commands:
   - echo "It worked...!"
+  when:
+    event: tag
+    branch: master
