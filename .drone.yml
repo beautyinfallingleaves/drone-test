@@ -15,7 +15,6 @@ steps:
   commands:
   - echo "A release* tag was pushed"
   when:
-    event: tag
     tag: release*
 - name: dev-test
   image: alpine
