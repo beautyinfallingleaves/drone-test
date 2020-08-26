@@ -3,10 +3,25 @@ kind: pipeline
 type: docker
 
 steps:
-- name: test
+- name: master-test
   image: alpine
   commands:
-  - echo "It worked...!"
+  - echo "Master was affected"
+  when:
+    branch: master
+
+steps:
+- name: dev-test
+  image: alpine
+  commands:
+  - echo "Dev was affected"
+  when:
+    branch: dev
+
+steps:
+- name: tag-test
+  image: alpine
+  commands:
+  - echo "A tag was published"
   when:
     event: tag
-    branch: master
