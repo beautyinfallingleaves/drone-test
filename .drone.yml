@@ -18,6 +18,6 @@ steps:
 - name: tag-test
   image: alpine
   commands:
-  - echo "A tag was published"
+  - echo "A tag was published!"
   when:
     event: tag
