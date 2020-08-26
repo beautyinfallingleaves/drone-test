@@ -16,7 +16,7 @@ steps:
   - echo "Master was tagged and merged"
   when:
     branch: master
-    event: push
+    event: [push, tag]
     tag: release*
     
 - name: dev-test
