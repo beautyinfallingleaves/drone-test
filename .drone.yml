@@ -19,7 +19,7 @@ steps:
 - name: dev-test
   image: alpine
   commands:
-  - echo "Dev was affected"
+  - echo "Dev was affected."
   when:
     branch: dev
     event: push
