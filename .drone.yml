@@ -10,12 +10,11 @@ steps:
   when:
     branch: master
     event: push
-- name: master-tag
+- name: rel-tag
   image: alpine
   commands:
-  - echo "Master was tagged and merged"
+  - echo "A release* tag was pushed"
   when:
-    branch: master
     event: tag
     tag: release*
 - name: dev-test
