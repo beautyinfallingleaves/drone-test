@@ -9,6 +9,8 @@ steps:
   - echo "Master was affected"
   when:
     branch: master
+    event: pull
+    
 - name: dev-test
   image: alpine
   commands:
