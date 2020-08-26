@@ -18,17 +18,11 @@ steps:
     branch: master
     event: tag
     tag: release*
-    
 - name: dev-test
   image: alpine
   commands:
   - echo "Dev was affected"
   when:
     branch: dev
-- name: tag-test
-  image: alpine
-  commands:
-  - echo "A tag was published!"
-  when:
-    event: tag
+    event: push
  
